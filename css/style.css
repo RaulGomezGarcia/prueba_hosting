@@ -1,0 +1,251 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth; /*conseguimos que el scroll sea suave*/
+}
+
+body{
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;/*con esto conseguimos mandar el footer abajo*/
+    font-family: Arial, Helvetica, sans-serif;
+        /*para poner imagen de fondo
+    con el top/cover no-repeat conseguimos que la imagen ocupe todo el espacio de la caja*/
+    background: url("../assets/img/fondo.png") center/cover no-repeat fixed;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh; /*Hacemos que el header ocupe el 100% de la pantalla nada mas se abra*/
+    color: #fff;
+}
+
+.nav-links{
+    position: fixed;
+    top: 0;/*Con estas dos conseguimos mandar los enlaces arriba de la pagina y que se arrastren si bajamos en ella*/
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    padding: 20px;
+    backdrop-filter: blur(5px);/*con esta propiedad conseguimos que lo que aparezca detras se difumine*/
+    width: 100%;
+    justify-content: center;
+    z-index: 10;/*Nos aparece por encima del resto de contenido*/
+}
+.nav-links a{
+    color: #fff;
+    text-decoration: none;
+}
+.nav-links a:hover{
+    color: orange;
+}
+
+
+.hero{
+    display: flex;
+    color: white;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    animation: aparecer 1.5s ease forwards
+}
+
+/*------Flecha Top*/
+.flecha-top{
+    position: fixed;
+    bottom: 80px;
+    right: 10px;
+    opacity: 0.7;
+    transition: all 0.3s ease-in-out;
+    z-index: 12;
+}
+.flecha-top:hover{
+    opacity: 1;
+    transform: translateY(-10px);
+}
+
+/*--------Clase secciones con CONTENIDO*/
+section{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+section h2{
+    margin: 40px 0;
+    color: #fff;
+    text-align: center;
+}
+
+.contenido{
+    background-color: #9ec8cf;
+}
+
+.contenido-img{
+    background-color: #075492cb;
+}
+
+.contenedor{
+    width: 60%;
+    max-width: 800px;
+}
+
+.contenedor-xl{
+    width: 80%;
+    max-width: 1200px;
+}
+
+/*------Seccion MIS INICIOS*/
+.contenedor-img-txt{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    align-items: center;
+}
+
+.contenedor-img-txt img{
+    width: 100%;
+    height: 100%;
+    max-height: 600px;
+    object-fit: cover;
+}
+
+.cuadro-txt{
+    background-color: #fff;
+    padding: 40px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-left: -80px;
+    transition: all 0.5s ease-in-out;
+}
+.cuadro-txt h3{
+    margin-bottom: 20px;
+}
+.contenedor-img-txt:hover .cuadro-txt{
+    transform: translate(-30px);
+
+}
+
+
+/*Seccion TOP VENTAS*/
+.top-ventas{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between;
+    gap: 10px;
+}
+.top-venta{
+    height: 350px;
+    display: grid;
+    grid-template-rows: 70% 25% 5%;
+    text-align: center;
+    transition: all 0.3s ease-in-out ;
+}
+.top-venta:hover{
+    transform: translateY(3px);
+    opacity: 1;
+    cursor: pointer;
+}
+
+.top-venta img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 9;
+}
+
+.descripcion{
+    background-color: #fff;
+    padding: 15px;
+    transform: translateY(-100px);
+    transition: all 0.5s ease-in-out;
+}
+
+.descripcion h3{
+    margin-bottom: 5px;
+}
+
+.descripcion img{
+    width: 40px;
+    height: auto;
+    margin-top: 15px;
+    transition: all 0.5s ease-in-out;
+}
+
+.top-venta:hover .descripcion{
+    transform: translateY(0px);
+}
+
+.top-venta:hover .descripcion img{
+    opacity: 0;
+}
+
+/*Seccion Formulario*/
+.contact-form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out ;
+}
+.contact-form:hover{
+    transform: translateY(3px);
+    opacity: 1;
+    cursor: pointer;
+}
+
+.contact-form label{
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+.contact-form textarea{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/*con el [type="submit"] conseguimos que solo afecte a los input de ese tipo*/
+.contact-form input[type="submit"]{
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    transition: all .3s ease-in-out;
+}
+.contact-form input[type="submit"]:hover{
+    background-color: orange;
+}
+
+/*FOOTER*/
+footer{
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+
+
+/*----------ANIMACIONES (ponerlas al final del codigo)*/
+@keyframes aparecer {
+    0%{
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+

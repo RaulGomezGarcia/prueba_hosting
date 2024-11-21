@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAYOUT Y ESTILOS DE UNA WEB</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="nav-links">
+           <a href="index.html">Inicio</a>
+           <a href="./views/productos.html" target="_blank">Productos</a>
+           <a href="#top-ventas">Top ventas</a>
+           <a href="#">Contacto</a>
+        </nav>
+        <div class="hero">
+            <img src="./assets/img/logo.png" alt="logo" height="400px" width="400px">
+            <h1>Bienvenido a nuestra página</h1>
+            <p>Descubre todos nuestros productos de gran calidad y con un precio para todos los bolsillos</p>
+        </div>
+    </header>
+
+    <main>
+        <div class="flecha-top">
+            <a href="#">
+                <img src="./assets/img/up.svg" alt="flechaup">
+            </a>
+        </div>
+
+        <section class="contenido">
+            <div class="contenedor-xl">
+                <h2>Nuestros inicios</h2>
+                <div class="contenedor-img-txt">
+                    <img src="./assets/img/producto2.png" alt="producto1" height="600" width="400">
+
+                    <div class="cuadro-txt">
+                        <h3>Conoce nuestra historia</h3>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores accusantium obcaecati nulla minus consectetur odio iusto! Magni modi fugiat eveniet omnis, debitis quam labore neque minima optio quisquam, suscipit quaerat.
+                        <br><br>
+                        Magnam facilis illo tempora maxime est, expedita soluta temporibus repellendus nihil nesciunt ipsum, molestiae molestias dicta. Magni maiores blanditiis corporis suscipit, sunt aut dolor harum quas, illum mollitia officia quam
+                        A fugit sequi nesciunt non ipsam vel nihil error quaerat iste iusto commodi magnam voluptatum molestias atque doloribus minus maiores quis quisquam, nulla accusamus! Doloremque, maxime autem! Illum, cupiditate rerum.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="contenido-img" id="top-ventas">
+            <div class="contenedor-xl">
+                <h2>Top ventas</h2>
+
+                <div class="top-ventas">
+                    <div class="top-venta">
+                        <img src="./assets/img/producto1.png" alt="imagen del top 1 en ventas" height="400" width="400">
+                        <div class="descripcion">
+                            <h3>Producto 1</h3>
+                            <p>Descripcion del producto que estamos vendiendo</p>
+                            <img src="./assets/img/down.svg" alt="icono" height="80" width="80">
+                        </div>
+                    </div>
+                    <div class="top-venta">
+                        <img src="./assets/img/producto2.png" alt="producto2" height="400" width="400">
+                        <div class="descripcion">
+                            <h3>Producto 2</h3>
+                            <p>Descripcion del producto que estamos vendiendo</p>
+                            <img src="./assets/img/down.svg" alt="icono" height="80" width="80">
+                        </div>
+                    </div>
+                    <div class="top-venta">
+                        <img src="./assets/img/producto3.png" alt="peoducto 3" width="400" height="400">
+                        <div class="descripcion">
+                            <h3>Producto 3</h3>
+                            <p>Descripcion del producto que estamos vendiendo</p>
+                            <img src="./assets/img/down.svg" alt="icono" height="80" width="80">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="contenido">
+            <div class="contenedor">
+                <h2>Contactanos</h2>
+                <form class="contact-form">
+                    <label for="name">Nombre</label>
+                    <input type="text" id="name" name="name" placeholder="Tu nombre">
+
+                    <label for="email">Correo electronico</label>
+                    <input type="email" id="email" name="email" placeholder="Tu correo electronico">
+
+                    <label for="mensaje">Mensaje</label>
+                    <textarea name="mensaje" id="mensaje" rows="4" placeholder="Escribe tu mensaje"></textarea>
+
+                    <input type="submit" value="Enviar">
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; Todos los derechos Reservados</p>
+    </footer>
+</body>
+</html>
